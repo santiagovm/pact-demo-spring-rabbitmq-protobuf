@@ -1,0 +1,7 @@
+spring:
+  application.name: beer-api-producer
+  cloud.stream.bindings.output.destination: verifications
+
+server.port: ${PORT:8080}
+
+logging.level.root: info

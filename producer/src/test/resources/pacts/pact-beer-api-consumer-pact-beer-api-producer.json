@@ -1,0 +1,46 @@
+{
+  "consumer": {
+    "name": "pact-beer-api-consumer"
+  },
+  "provider": {
+    "name": "pact-beer-api-producer"
+  },
+  "messages": [
+    {
+      "description": "an accepted verification message",
+      "metaData": {
+        "contentType": "some-mime-type"
+      },
+      "contents": {
+        "proto-byte-string": "ChBmb28tbWVzc2FnZS10eXBlEicKEHNhbnRpYWdvIHZhc3F1ZXoQARgHggEIbWVkZWxsaW6IAcDF+k4="
+      },
+      "providerStates": [
+        {
+          "name": "the patron is 45 years old"
+        }
+      ]
+    },
+    {
+      "description": "a rejected verification message",
+      "metaData": {
+        "contentType": "some-mime-type"
+      },
+      "contents": {
+        "proto-byte-string": "ChBmb28tbWVzc2FnZS10eXBlEiUKEXNlYmFzdGlhbiB2YXNxdWV6ggEIbmV3IHlvcmuIAYOx6uoE"
+      },
+      "providerStates": [
+        {
+          "name": "the patron is 9 years old"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "3.0.0"
+    },
+    "pact-jvm": {
+      "version": "4.1.7"
+    }
+  }
+}
